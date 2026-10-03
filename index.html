@@ -1,0 +1,247 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Del sistema al modelo</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="sheet">
+
+        <header>
+            <!-- <div class="corner">
+                Modelar el sistema<br>
+                antes de construirlo
+            </div> -->
+
+            <h1>Universidad Ciudadana de NL</h1>
+
+            <div class="tag">
+                Diagrama de proceso o modelo conceptual —
+                Actividad formativa 1
+            </div>
+
+            <p class="sub">
+                ALUMNO: Margarito Cisneros Noyola<br>
+                Tutor: Ing. Oscar Tamez Valdes<br>
+                FECHA: 30/10/2026
+            </p>
+        </header>
+
+
+        <!-- CONCEPTOS PRINCIPALES -->
+
+        <div class="grid4">
+
+            <div class="chip">
+                <b>Sistema</b>
+                <span>
+                    Conjunto de entidades que interactúan para lograr un fin
+                    (Schmidt y Taylor, 1970).
+                </span>
+            </div>
+
+            <div class="chip">
+                <b>Modelo</b>
+                <span>
+                    Representación simplificada del sistema para estudiarlo
+                    sin intervenirlo.
+                </span>
+            </div>
+
+            <div class="chip">
+                <b>Simulación</b>
+                <span>
+                    Experimentación numérica con el modelo cuando no hay
+                    solución analítica.
+                </span>
+            </div>
+
+            <div class="chip">
+                <b>Estado del sistema</b>
+                <span>
+                    Variables que describen el sistema en un instante dado.
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- CASO SELECCIONADO -->
+
+        <div class="panel">
+
+            <h2>
+                <span class="n">1</span>
+                Caso seleccionado: sistema de pedidos de una tienda en línea
+            </h2>
+
+            <div class="elgrid">
+
+                <div class="el">
+                    <b>Entradas</b>
+                    <p>
+                        Pedido del cliente, datos de pago y cupón o promoción,
+                        si existe.
+                    </p>
+                </div>
+
+                <div class="el">
+                    <b>Salidas</b>
+                    <p>
+                        Confirmación del pedido, inventario actualizado,
+                        notificación de envío y comprobante.
+                    </p>
+                </div>
+
+                <div class="el">
+                    <b>Variables de estado</b>
+                    <p>
+                        Estado del pedido, nivel de inventario por producto,
+                        tamaño de la cola de pedidos.
+                    </p>
+                </div>
+
+                <div class="el">
+                    <b>Parámetros</b>
+                    <p>
+                        Tiempo promedio de preparación, capacidad del almacén,
+                        repartidores disponibles, costo de envío.
+                    </p>
+                </div>
+
+                <div class="el">
+                    <b>Restricciones</b>
+                    <p>
+                        Inventario nunca negativo, máximo de pedidos
+                        simultáneos, horario del centro de distribución.
+                    </p>
+                </div>
+
+                <div class="el">
+                    <b>Supuestos</b>
+                    <p>
+                        Tiempos de preparación variables pero con promedio
+                        conocido; pasarela de pago siempre disponible.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIAGRAMA DE PROCESO -->
+
+        <div class="panel">
+
+            <h2>
+                <span class="n">2</span>
+                Diagrama de proceso / modelo conceptual
+            </h2>
+
+            <div class="flow">
+
+                <div class="box">
+                    Cliente confirma pedido
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="diamond">
+                    <span>¿Hay stock?</span>
+                </div>
+
+                <div class="branch">
+
+                    <small>NO</small>
+
+                    <div class="arrow">↓</div>
+
+                    <div class="waitbox">
+                        Pedido en espera + aviso al cliente
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="flow flow-second">
+
+                <small class="yes">
+                    SÍ →
+                </small>
+
+                <div class="box alt">
+                    Procesar pago
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="box alt">
+                    Preparar pedido
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="box alt">
+                    Enviar pedido
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="box alt">
+                    Entregar al cliente
+                </div>
+
+            </div>
+
+
+            <p class="note">
+                En cada paso se actualizan las variables de estado:
+                estado del pedido e inventario disponible.
+            </p>
+
+        </div>
+
+
+        <!-- REFERENCIAS -->
+
+        <footer>
+
+            <ul>
+
+                <li>
+                    Banks, J., Carson, J. S., Nelson, B. L., & Nicol, D. M.
+                    (2010). Discrete-event system simulation (5.a ed.).
+                    Pearson.
+                </li>
+
+                <li>
+                    Law, A. M. (2015). Simulation modeling and analysis
+                    (5.a ed.). McGraw-Hill Education.
+                </li>
+
+                <li>
+                    Schmidt, J. W., & Taylor, R. E. (1970).
+                    Simulation and analysis of industrial systems.
+                    Irwin.
+                </li>
+
+            </ul>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```

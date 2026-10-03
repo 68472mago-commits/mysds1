@@ -1,0 +1,434 @@
+```css
+:root {
+    --navy: #dd7513;
+    --teal: #1B9AA0;
+    --orange: #F2994A;
+    --bg: #EAF3FB;
+    --ink: #1c2b3a;
+    --soft: #5c6b7a;
+    --card: #ffffff;
+    --line: #D7E4F0;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(
+        180deg,
+        #EAF3FB,
+        #F5F9FD
+    );
+
+    font-family:
+        'Segoe UI',
+        Calibri,
+        Arial,
+        sans-serif;
+
+    color: var(--ink);
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.sheet {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 22px 40px;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    position: relative;
+    padding: 34px 30px 26px;
+    overflow: hidden;
+}
+
+header .tag {
+    font-size: 12.5px;
+    color: var(--teal);
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 6px 0 6px;
+
+    font-size: 40px;
+
+    color: var(--navy);
+
+    font-weight: 800;
+
+    letter-spacing: -.01em;
+}
+
+header .sub {
+    color: var(--soft);
+    font-size: 15px;
+    max-width: 640px;
+}
+
+header .corner {
+    position: absolute;
+
+    top: 24px;
+    right: 26px;
+
+    text-align: right;
+
+    font-style: italic;
+
+    color: var(--soft);
+
+    font-size: 12.5px;
+
+    max-width: 190px;
+}
+
+
+/* CUATRO CONCEPTOS */
+
+.grid4 {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin: 18px 0;
+}
+
+.chip {
+    background: var(--card);
+
+    border: 1px solid var(--line);
+
+    border-top: 5px solid var(--teal);
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+}
+
+.chip b {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+.chip span {
+    font-size: 13px;
+
+    color: var(--soft);
+}
+
+
+/* PANELES */
+
+.panel {
+    background: var(--card);
+
+    border: 1px solid var(--line);
+
+    border-radius: 16px;
+
+    padding: 22px 24px;
+
+    margin-top: 20px;
+
+    box-shadow:
+        0 3px 14px
+        rgba(18, 41, 79, .05);
+}
+
+.panel h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--navy);
+
+    font-size: 20px;
+
+    margin: 0 0 14px;
+}
+
+.panel h2 .n {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    flex: 0 0 auto;
+}
+
+
+/* ELEMENTOS DEL CASO */
+
+.elgrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.el {
+    border: 1px solid var(--line);
+
+    border-radius: 10px;
+
+    padding: 12px 14px;
+
+    background: #FAFCFE;
+}
+
+.el b {
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 13.5px;
+
+    margin-bottom: 4px;
+}
+
+.el p {
+    margin: 0;
+
+    font-size: 12.8px;
+
+    color: var(--ink);
+
+    line-height: 1.45;
+}
+
+
+/* DIAGRAMA DE PROCESO */
+
+.flow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin: 10px 0 6px;
+}
+
+.box {
+    background: var(--navy);
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    padding: 12px 14px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    min-width: 112px;
+
+    max-width: 132px;
+}
+
+.box.alt {
+    background: var(--teal);
+}
+
+
+/* ROMBO */
+
+.diamond {
+    background: var(--orange);
+
+    color: #fff;
+
+    width: 118px;
+    height: 118px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 12.5px;
+
+    font-weight: 700;
+
+    transform: rotate(45deg);
+
+    border-radius: 14px;
+}
+
+.diamond span {
+    transform: rotate(-45deg);
+
+    padding: 6px;
+}
+
+
+/* FLECHAS */
+
+.arrow {
+    font-size: 20px;
+
+    color: var(--soft);
+
+    flex: 0 0 auto;
+}
+
+
+/* RAMA DEL NO */
+
+.branch {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.branch small {
+    font-size: 11px;
+
+    color: var(--soft);
+
+    font-weight: 700;
+}
+
+.waitbox {
+    background: #C0392B;
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    padding: 10px 12px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    max-width: 110px;
+}
+
+
+/* SEGUNDA LÍNEA DEL DIAGRAMA */
+
+.flow-second {
+    margin-top: 2px;
+}
+
+.yes {
+    color: var(--soft);
+
+    font-weight: 700;
+
+    margin-right: 4px;
+}
+
+
+/* NOTA DEL DIAGRAMA */
+
+.note {
+    font-size: 12.5px;
+
+    color: var(--soft);
+
+    margin-top: 14px;
+
+    text-align: center;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    margin-top: 22px;
+
+    font-size: 11.5px;
+
+    color: var(--soft);
+}
+
+footer li {
+    margin-bottom: 5px;
+
+    font-style: italic;
+}
+
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 760px) {
+
+    .grid4 {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .elgrid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    header .corner {
+        position: static;
+
+        margin-top: 10px;
+
+        max-width: none;
+    }
+
+}
+```
